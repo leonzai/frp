@@ -1,0 +1,14 @@
+serverAddr = "mg.qianjinyike.com"
+serverPort = 7000
+
+[[proxies]]
+name = "https_proxy"
+type = "https"
+customDomains = ["mg.qianjinyike.com"]
+
+[proxies.plugin]
+type = "https2https"
+localAddr = "mg246.test"
+crtPath = "/etc/frp/server.pem"
+keyPath = "/etc/frp/server.key"
+hostHeaderRewrite = "mg.qianjinyike.com"
